@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid #646cff;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  padding-inline: 1rem;
+}

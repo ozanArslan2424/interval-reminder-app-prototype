@@ -14,17 +14,30 @@ export default function Card() {
     const [number, setNumber] = useState(1);
 
     const handleIncrement = () => {
-        if (selectedInterval === 'years') {
-            setNumber(number + 1);
+        if (selectedInterval === 'yıl') {
+            setNumber(currNumber => currNumber + 1);
             number > 1 && alert('o kadar da değil !!!');
             setNumber(2);
         } else (
-            setNumber(number + 1)
+            setNumber(currNumber => currNumber + 1)
         )
     };
-
     const handleDecrement = () => {
-        number >= 1 && setNumber(number - 1);
+        number >= 1 && setNumber(currNumber => currNumber - 1);
+    };
+
+
+    const handleIncrementFive = () => {
+        if (selectedInterval === 'yıl') {
+            setNumber(currNumber => currNumber + 5);
+            number > 1 && alert('o kadar da değil !!!');
+            setNumber(2);
+        } else (
+            setNumber(currNumber => currNumber + 5)
+        )
+    };
+    const handleDecrementFive = () => {
+        number >= 1 && setNumber(currNumber => currNumber - 5);
     };
 
     return (
@@ -39,16 +52,20 @@ export default function Card() {
                 ))}
             </select>
             <div className="card-content">
-                <button onClick={handleDecrement} className="minus button">-</button>
+                <div className="buttons-wrapper">
+                    <button onClick={handleDecrement} className="minus button">-</button>
+                    <button onClick={handleDecrementFive} className="plus-five button">+5</button>
+                </div>
                 <div className="mid-container">
-
                     <div className={(selectedInterval) + "-container container"}>
                         <div className={(selectedInterval) + "-amount numbers"}>{number}</div>
                         <div className={(selectedInterval) + "-flip flip"}></div>
                     </div>
-
                 </div>
-                <button onClick={handleIncrement} className="plus button">+</button>
+                <div className="buttons-wrapper">
+                    <button onClick={handleIncrement} className="plus button">+</button>
+                    <button onClick={handleIncrementFive} className="plus-five button">+5</button>
+                </div>
             </div>
         </div>
     )

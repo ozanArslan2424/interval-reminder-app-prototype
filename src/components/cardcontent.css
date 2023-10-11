@@ -1,82 +1,182 @@
 :root {
     --numbers-width: 7rem;
     --numbers-height: 8rem;
-    --numbers-font-size: 5rem;
-    --flip-color: rgb(218, 193, 160);
+    --numbers-font: 500 4rem Montserrat;
+    --flip-color: #dac1a0;
+    --shadow-color: #7e6a51;
+    --background-color: #eaeaea;
+    --circle-multiplier: 1.1
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 2rem;
+    border: 1px solid var(--shadow-color);
+    background-color: #ebd1b0;
+    border-radius: .5rem;
+    gap: .5rem;
+    box-shadow: .2rem .2rem var(--shadow-color)
 }
 
 .card-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: .75rem;
+    padding-top: 1.5rem;
+}
+
+.interval-type,
+.reminder-name {
+    padding: .25rem;
+    border: 1px solid var(--shadow-color);
+    margin-left: .2rem;
+    background-color: var(--background-color);
+    font-size: 1.25rem;
+    text-align: center;
+    outline: none;
+    border-radius: .5rem;
+    box-shadow: .15rem .15rem var(--shadow-color)
+}
+.interval-type {
+    text-transform: capitalize;
 }
 
 .button {
-    height: 4rem;
     width: 4rem;
-    border-radius: 0.5rem;
+    height: 4rem;
+    border: 1px solid var(--shadow-color);
     font-size: 2rem;
-    box-shadow: 0.2rem 0.2rem rgb(126, 106, 81);
-    border: 1px solid rgb(126, 106, 81);
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem var(--shadow-color)
 }
 
 .button:hover {
     transform: scale(1.015);
-    cursor: pointer;
+    cursor: pointer
 }
 
 .button:active {
-    background-color: rgb(234, 234, 234);
-    box-shadow: 0.1rem 0.1rem rgb(126, 106, 81);
-    transform: translate(0.1rem);
+    background-color: var(--background-color);
+    box-shadow: .1rem .1rem var(--shadow-color);
+    transform: translate(0.1rem)
 }
 
 .mid-container {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    padding-top: 1.5rem;
+    width: 10rem;
+    gap: .75rem
 }
 
-.numbers-container {
+.container {
     position: relative;
-    height: var(--numbers-height);
-    width: var(--numbers-width);
-    margin-left: 0.2rem;
-    background-color: rgb(234, 234, 234);
-    border-radius: 0.5rem;
-    border: none;
+    margin-left: .2rem;
+    background-color: #fcf8f4;
+    box-shadow: .2rem .2rem var(--shadow-color);
+    border-radius: .5rem
 }
 
 .numbers {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    font-size: var(--numbers-font-size);
     position: absolute;
-    height: var(--numbers-height);
-    width: var(--numbers-width);
     z-index: 1;
-    border: none;
-    box-shadow: 0.2rem 0.2rem rgb(126, 106, 81);
-    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: var(--numbers-font);
+    border-radius: .5rem
 }
 
-.numbers-flip {
-    border: none;
+.flip {
     position: absolute;
-    background-color: var(--flip-color);
-    height: calc(var(--numbers-height) / 2);
+    background-color: var(--flip-color)
+}
+
+.gün-container {
     width: var(--numbers-width);
-    bottom: 0;
+    height: var(--numbers-height);
+    border-radius: .5rem
+}
+
+.gün-amount {
+    width: var(--numbers-width);
+    height: var(--numbers-height)
+}
+
+.gün-flip {
     right: 0;
-    border-radius: 0 0 0.5rem 0.5rem;
+    bottom: 0;
+    width: var(--numbers-width);
+    height: calc(var(--numbers-height) / 2);
+    border-radius: 0 0 .5rem .5rem
 }
 
-.interval-type {
-    padding-top: 0.25rem;
-    font-size: 1.25rem;
+.saat-container {
+    width: calc(var(--numbers-height) * var(--circle-multiplier));
+    height: calc(var(--numbers-height) * var(--circle-multiplier));
+    border-radius: 8rem
 }
 
-.minus .plus
+.saat-amount {
+    width: calc(var(--numbers-height) * var(--circle-multiplier));
+    height: calc(var(--numbers-height) * var(--circle-multiplier))
+}
+
+.saat-flip {
+    right: calc(var(--numbers-height) / 5.7);
+    bottom: calc(var(--numbers-height) / 2.35);
+    width: calc(var(--numbers-height) * var(--circle-multiplier));
+    height: calc(var(--numbers-height) / 1.67);
+    transform: rotate(-45deg);
+    border-radius: 100rem 100rem 0 0
+}
+
+.hafta-container {
+    width: var(--numbers-width);
+    height: var(--numbers-width);
+    border: .5rem outset var(--flip-color);
+    border-radius: 1.5rem
+}
+
+.hafta-amount {
+    width: calc(var(--numbers-width) - 1rem);
+    height: calc(var(--numbers-width) - 1rem)
+}
+
+.ay-container {
+    width: var(--numbers-height);
+    height: var(--numbers-width)
+}
+
+.ay-amount {
+    width: var(--numbers-height);
+    height: var(--numbers-width)
+}
+
+.ay-flip {
+    right: 0;
+    bottom: 0;
+    width: calc(var(--numbers-height) / 2);
+    height: var(--numbers-width);
+    border-radius: 0 .5rem .5rem 0
+}
+
+.yıl-container {
+    width: var(--numbers-width);
+    height: calc(var(--numbers-height) / 1.5)
+}
+
+.yıl-amount {
+    width: var(--numbers-width);
+    height: calc(var(--numbers-height) / 1.5)
+}

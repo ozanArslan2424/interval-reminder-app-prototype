@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './cardcontent.css'
 import PropTypes from 'prop-types';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faPen, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function ReminderListCard({ reminders }) {
     return (
@@ -14,7 +14,8 @@ export default function ReminderListCard({ reminders }) {
                         <span className="reminderlist-name">{reminder.name}:</span> 
                         <span className="spacer"></span>
                         <span className="reminderlist-interval">{reminder.interval} aralıklı.</span>
-                        <button className="reminderlist-delete button center-flex"><FontAwesomeIcon icon={faXmark} size="lg" /></button>
+                        <button className="reminderlist-buttons edit button"><FontAwesomeIcon icon={faPen} size="m" /></button>
+                        <button className="reminderlist-buttons delete button"><FontAwesomeIcon icon={faXmark} size="lg" /></button>
                     </li>
                 ))}
             </ol>

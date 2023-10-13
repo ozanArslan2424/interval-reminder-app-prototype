@@ -1,34 +1,47 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './cardcontent.css'
 import PropTypes from 'prop-types';
-import { faPen, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faPen, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-export default function ReminderListCard({ reminders }) {
+const ReminderListCard = ({ reminders, onDeleteReminder, onEditReminder }) => {
     return (
         <div className="card">
             <h2 className="card-title">Hatırlatıcılar:</h2>
-            {/* <div className="segments"> */}
             <ol className='reminderlist'>
-                {reminders.map((reminder, index) => (
-                    <li key={index} className='reminderlist-item segments'>
-                        <span className="reminderlist-name">{reminder.name}:</span> 
+                {reminders.map((reminder) => (
+                    <li key={reminder.id} className='reminderlist-item segment'>
+                        <span className="reminderlist-name">{reminder.name}:</span>
                         <span className="spacer"></span>
-                        <span className="reminderlist-interval">{reminder.interval} aralıklı.</span>
-                        <button className="reminderlist-buttons edit button"><FontAwesomeIcon icon={faPen} size="m" /></button>
-                        <button className="reminderlist-buttons delete button"><FontAwesomeIcon icon={faXmark} size="lg" /></button>
+                        <span className="reminderlist-interval">{reminder.amount} {reminder.interval} aralıklı.</span>
+                        <button
+                            className="reminderlist-buttons edit button"
+                            onClick={() => onEditReminder(reminder.id)}
+                        >
+                            <FontAwesomeIcon icon={faPen} size="m" />
+                        </button>
+                        <button
+                            className="reminderlist-buttons delete button"
+                            onClick={() => onDeleteReminder(reminder.id)}
+                        >
+                            <FontAwesomeIcon icon={faTimes} size="lg" />
+                        </button>
                     </li>
                 ))}
             </ol>
-            {/* </div> */}
         </div>
-    )
-}
+    );
+};
 
 ReminderListCard.propTypes = {
     reminders: PropTypes.arrayOf(
         PropTypes.shape({
+            id: PropTypes.string.isRequired,
             name: PropTypes.string.isRequired,
             interval: PropTypes.string.isRequired,
         })
     ).isRequired,
+    onDeleteReminder: PropTypes.func.isRequired,
+    onEditReminder: PropTypes.func.isRequired,
 };
+
+export default ReminderListCard;

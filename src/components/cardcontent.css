@@ -1,17 +1,16 @@
 :root {
+    --action-bg-color: #5d88d1;
+    --card-bg-color: #ebd1b0;
     --circle-multiplier: 1.1;
+    --danger-bg-color: #bd6464;
     --numbers-font: 500 4rem Montserrat;
     --numbers-height: 8rem;
     --numbers-width: 7rem;
-    --segments-width: 24rem;
+    --offwhite-bg-color: #f4f4f4;
+    --segment-width: 24rem;
     --shadow-color: #7e6a51;
     --shadow-settings: .15rem .15rem var(--shadow-color);
-    --card-bg-color: #ebd1b0;
     --white-bg-color: #fcf8f4;
-    --offwhite-bg-color: #f4f4f4;
-    --danger-bg-color: #bd6464;
-    --action-bg-color: #5d88d1;
-    /* --flip-color: #dac1a0; */
 }
 
 .card {
@@ -33,21 +32,21 @@
     box-shadow: var(--shadow-settings);
     gap: .75rem;
     padding: 2rem;
-    width: var(--segments-width);
+    width: var(--segment-width);
 }
 
-.segments {
-    background-color: var(--white-bg-color);
+.segment {
+    background-color: var(--offwhite-bg-color);
     border-radius: .5rem;
     border: 1px solid var(--shadow-color);
     box-shadow: var(--shadow-settings);
     font-size: 1.25rem;
     padding: .25rem .5rem;
     text-align: center;
-    width: var(--segments-width);
+    width: var(--segment-width);
 }
 
-.segments:hover {
+.segment:hover {
     background-color: var(--offwhite-bg-color);
     cursor: pointer;
 }
@@ -113,6 +112,9 @@
 }
 
 .numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: .5rem;
     font: var(--numbers-font);
     position: absolute;
@@ -147,54 +149,23 @@
     width: var(--numbers-width);
 }
 
-/* .flip {
-    background-color: var(--flip-color);
-    border: 1px solid var(--shadow-color);
-    position: absolute;
-}
-
-.saat-flip {
-    border-radius: 100rem 100rem 0 0;
-    bottom: calc(var(--numbers-height) / 2.35);
-    height: calc(var(--numbers-height) / 1.67);
-    right: calc(var(--numbers-height) / 5.7);
-    transform: rotate(-45deg);
-    width: calc(var(--numbers-height) * var(--circle-multiplier));
-}
-
-.gün-flip {
-    border-radius: 0 0 .5rem .5rem;
-    bottom: 0;
-    height: calc(var(--numbers-height) / 2);
-    right: 0;
-    width: var(--numbers-width);
-}
-
-.ay-flip {
-    border-radius: 0 .5rem .5rem 0;
-    bottom: 0;
-    height: var(--numbers-width);
-    right: 0;
-    width: calc(var(--numbers-height) / 2);
-} */
-
 .remindername-error {
-    color: var(--shadow-color);
+    color: var(--danger-bg-color);
     font-size: large;
     text-align: center;
 }
 
 .reminderlist {
+    padding-bottom: .5rem;
     padding-inline: .5rem;
     padding-top: .5rem;
-    padding-bottom: .5rem;
 }
 
 .reminderlist-item {
-    display: flex;
     align-items: center;
-    margin-bottom: .5rem;
+    display: flex;
     height: 2.5rem;
+    margin-bottom: .5rem;
     width: 100%;
 }
 
@@ -205,26 +176,28 @@
 .reminderlist-name {
     font-weight: 600;
 }
+
 .spacer {
-    width: 100%;
     flex: 1;
+    width: 100%;
 }
 
 
 .reminderlist-buttons {
     align-items: center;
-    justify-content: center;
-    display: none !important;
     border-radius: .5rem;
-    margin-left: .5rem; 
-    height: 1.5rem;
-    width: 1.5rem;
     color: var(--shadow-color);
+    display: none !important;
+    height: 1.5rem;
+    justify-content: center;
+    margin-left: .5rem;
+    width: 1.5rem;
 }
 
 .reminderlist-buttons.delete:hover {
     color: var(--danger-bg-color);
 }
+
 .reminderlist-buttons.edit:hover {
     color: var(--action-bg-color);
 }

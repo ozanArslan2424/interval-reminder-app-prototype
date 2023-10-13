@@ -1,5 +1,7 @@
 export default function One() {
     return (
-        <h1>ONE</h1>
+        <div className="main-wrapper">
+            <h1>ONE</h1>
+        </div>
     )
 }

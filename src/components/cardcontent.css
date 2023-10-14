@@ -2,7 +2,7 @@
     --action-bg-color: #5d88d1;
     --card-bg-color: #ebd1b0;
     --circle-multiplier: 1.1;
-    --danger-bg-color: #bd6464;
+    --danger-bg-color: firebrick;
     --numbers-font: 500 4rem Montserrat;
     --numbers-height: 8rem;
     --numbers-width: 7rem;
@@ -46,12 +46,17 @@
     width: var(--segment-width);
 }
 
+.input {
+    text-align: left;
+}
+
 .segment:hover {
     background-color: var(--offwhite-bg-color);
     cursor: pointer;
 }
 
-.reminder-name:focus {
+.reminder-name:focus,
+.input:focus {
     background-color: var(--white-bg-color);
     box-shadow: none;
     outline: dotted 1px black;
@@ -61,7 +66,8 @@
     outline: none !important;
 }
 
-.reminder-name:hover {
+.reminder-name:hover,
+.input:hover {
     cursor: text !important;
 }
 

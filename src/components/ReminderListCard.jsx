@@ -3,7 +3,7 @@ import './cardcontent.css'
 import PropTypes from 'prop-types';
 import { faPen, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-const ReminderListCard = ({ reminders, onDeleteReminder, onEditReminder }) => {
+const ReminderListCard = ({ reminders, onDeleteReminder }) => {
     return (
         <div className="card">
             <h2 className="card-title">Hatırlatıcılar:</h2>
@@ -15,7 +15,7 @@ const ReminderListCard = ({ reminders, onDeleteReminder, onEditReminder }) => {
                         <span className="reminderlist-interval">{reminder.amount} {reminder.interval} aralıklı.</span>
                         <button
                             className="reminderlist-buttons edit button"
-                            onClick={() => onEditReminder(reminder.id)}
+                            // onClick={() => onEditReminder(reminder.id)}
                         >
                             <FontAwesomeIcon icon={faPen} size="m" />
                         </button>
@@ -41,7 +41,8 @@ ReminderListCard.propTypes = {
         })
     ).isRequired,
     onDeleteReminder: PropTypes.func.isRequired,
-    onEditReminder: PropTypes.func.isRequired,
+    // onEditReminder: PropTypes.func.isRequired,
 };
 
 export default ReminderListCard;
+

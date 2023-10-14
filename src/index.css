@@ -27,3 +27,13 @@ nav {
   gap: 2rem;
   padding: 2rem;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+label {
+  margin-bottom: -.3rem;
+}

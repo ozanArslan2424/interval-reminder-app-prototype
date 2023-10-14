@@ -12,22 +12,22 @@ Bu web sitesi aralıklı hatırlatıcılar oluşturabileceğimiz bir uygulama fi
 - Üstteki navbar sadece test nedenleriyle var. Sayfalara kullanışlı component'lar koymadım.
   
 > ### Kontrol listesi 
-> 🔴 Aktif/İnaktif kart ayrımı 
- 🟡 Giriş kartı
-   &ensp;&ensp;&ensp;&ensp; 🔴 Doğrulama
- 🟡 Hesap oluştur kartı
-   &ensp;&ensp;&ensp;&ensp; 🟢 Input client side doğrulama
-   &ensp;&ensp;&ensp;&ensp; 🔴 Backend
- 🟡 Hatırlatıcı oluştur kartı
-   &ensp;&ensp;&ensp;&ensp; 🟢 Başlık
-   &ensp;&ensp;&ensp;&ensp; 🟢 Aralık seçenekleri
-   &ensp;&ensp;&ensp;&ensp; 🟢 Artır/azalt tuşları
-   &ensp;&ensp;&ensp;&ensp; 🟢 Listeye ekle tuşu
-   &ensp;&ensp;&ensp;&ensp; 🔴 Doğrudan sayı gir fonksiyonu
- 🟡 Hatırlatıcılar listesi
-   &ensp;&ensp;&ensp;&ensp; 🟢 Oluşturulan hatırlatıcılar listeleniyor
-   &ensp;&ensp;&ensp;&ensp; 🟢 Sil fonksiyonu
-   &ensp;&ensp;&ensp;&ensp; 🔴 Backend (kişiye özel çalışan hatırlatıcı listesi)
-   &ensp;&ensp;&ensp;&ensp; 🔴 Düzenle fonksiyonu
- 🟡 Düzenle kartı
-   &ensp;&ensp;&ensp;&ensp;  🔴 Bu kart yalnızca düzenlenerken görünecek
+> - 🔴 Aktif/İnaktif kart ayrımı 
+> - 🟡 Giriş kartı
+>    - 🔴 Doğrulama
+> - 🟡 Hesap oluştur kartı
+>    - 🟢 Input client side doğrulama
+>    - 🔴 Backend
+> - 🟡 Hatırlatıcı oluştur kartı
+>    - 🟢 Başlık
+>    - 🟢 Aralık seçenekleri
+>    - 🟢 Artır/azalt tuşları
+>    - 🟢 Listeye ekle tuşu
+>    - 🔴 Doğrudan sayı gir fonksiyonu
+> - 🟡 Hatırlatıcılar listesi
+>    - 🟢 Oluşturulan hatırlatıcılar listeleniyor
+>    - 🟢 Sil fonksiyonu
+>    - 🔴 Backend (kişiye özel çalışan hatırlatıcı listesi)
+>    - 🔴 Düzenle fonksiyonu
+> - 🟡 Düzenle kartı
+>    -  🔴 Bu kart yalnızca düzenlenerken görünecek

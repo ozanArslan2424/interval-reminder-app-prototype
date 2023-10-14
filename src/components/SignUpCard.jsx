@@ -103,7 +103,7 @@ const SignUpCard = ({ onSuccess }) => {
                 />
                 <button
                     disabled={!validName || !validMail || !validPwd || !validMatch ? true : false}
-                    className="segment button signup">
+                    className="segment button sign">
                     Kaydol
                 </button>
             </form>

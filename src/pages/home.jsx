@@ -1,4 +1,5 @@
 import { useState } from 'react';
+// components
 import ReminderSettingsCard from '../components/ReminderSettingsCard';
 import ReminderListCard from '../components/ReminderListCard';
 import ReminderEditCard from '../components/ReminderEditCard';
@@ -13,9 +14,7 @@ export default function Home() {
         setReminders(updatedReminders);
     };
 
-    // const editReminder = (reminderIdEdit) => {
-
-    // };
+    // const editReminder = (reminderIdEdit) => {};
 
     const [success, setSuccess] = useState(false);
 
@@ -25,13 +24,15 @@ export default function Home() {
     }
 
     return (
-        <div className="main-wrapper">
+        <>
             <h1>HOME</h1>
-            <SignInCard />
-            {!success && (<SignUpCard onSuccess={handleSignUpSuccess} />)}
-            <ReminderSettingsCard reminders={reminders} setReminders={setReminders} />
-            {reminders.length > 0 && (<ReminderListCard reminders={reminders} onDeleteReminder={deleteReminder} />)}
-            <ReminderEditCard />
-        </div>
+            <div className="content-wrapper">
+                <SignInCard />
+                {!success && (<SignUpCard onSuccess={handleSignUpSuccess} />)}
+                <ReminderSettingsCard reminders={reminders} setReminders={setReminders} />
+                {reminders.length > 0 && (<ReminderListCard reminders={reminders} onDeleteReminder={deleteReminder} />)}
+                <ReminderEditCard />
+            </div>
+        </>
     );
 }

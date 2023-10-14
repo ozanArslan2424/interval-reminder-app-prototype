@@ -7,11 +7,11 @@
   {
     "id": "1",
     "name": "Test",
-    "link": "/one"
+    "link": "/testone"
   },
   {
     "id": "2",
     "name": "Test2",
-    "link": "/two"
+    "link": "/testtwo"
   }
 ]

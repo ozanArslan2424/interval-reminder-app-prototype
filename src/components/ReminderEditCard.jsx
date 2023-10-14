@@ -1,5 +1,5 @@
 
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 const ReminderEditCard = () => {
 
@@ -9,7 +9,6 @@ const ReminderEditCard = () => {
         </div>
     );
 }
-
 export default ReminderEditCard;
 
 // ReminderEditCard.propTypes = {

@@ -5,6 +5,7 @@ import Navbar from './components/Navbar.jsx'
 // PAGES
 import Home from "./pages/home"
 import One from "./pages/one"
+import Two from "./pages/two"
 
 export default function App() {
 
@@ -14,7 +15,8 @@ export default function App() {
       <main>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="one" element={<One />} />
+          <Route path="testone" element={<One />} />
+          <Route path="testtwo" element={<Two />} />
         </Routes>
       </main>
     </BrowserRouter>

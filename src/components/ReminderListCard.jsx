@@ -1,15 +1,15 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './cardcontent.css'
-import PropTypes from 'prop-types';
-import { faPen, faTimes } from '@fortawesome/free-solid-svg-icons';
+import "./cardcontent.css";
+import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const ReminderListCard = ({ reminders, onDeleteReminder }) => {
     return (
         <div className="card">
             <h2 className="card-title">Hatırlatıcılar:</h2>
-            <ol className='reminderlist'>
+            <ol className="reminderlist">
                 {reminders.map((reminder) => (
-                    <li key={reminder.id} className='reminderlist-item segment'>
+                    <li key={reminder.id} className="reminderlist-item segment">
                         <span className="reminderlist-name">{reminder.name}:</span>
                         <span className="spacer"></span>
                         <span className="reminderlist-interval">{reminder.amount} {reminder.interval} aralıklı.</span>
@@ -45,4 +45,3 @@ ReminderListCard.propTypes = {
 };
 
 export default ReminderListCard;
-

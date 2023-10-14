@@ -1,116 +1,53 @@
-:root {
-    --action-bg-color: #5d88d1;
-    --card-bg-color: #ebd1b0;
-    --circle-multiplier: 1.1;
-    --danger-bg-color: firebrick;
-    --numbers-font: 500 4rem Montserrat;
-    --numbers-height: 8rem;
-    --numbers-width: 7rem;
-    --offwhite-bg-color: #f4f4f4;
-    --segment-width: 24rem;
-    --shadow-color: #7e6a51;
-    --shadow-settings: .15rem .15rem var(--shadow-color);
-    --white-bg-color: #fcf8f4;
-}
-
-.card {
-    background-color: var(--card-bg-color);
+.card-content {
+    align-items: center;
+    background-color: var(--clr-secondary);
     border-radius: .5rem;
-    border: 1px solid var(--shadow-color);
+    border: 1px solid var(--clr-primary);
     box-shadow: var(--shadow-settings);
     display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    min-width: 450px;
-    padding: 1rem 2rem 2rem;
-}
-
-.card-content {
-    background-color: var(--offwhite-bg-color);
-    border-radius: .5rem;
-    border: 1px solid var(--shadow-color);
-    box-shadow: var(--shadow-settings);
     gap: .75rem;
+    justify-content: center;
     padding: 2rem;
     width: var(--segment-width);
 }
 
-.segment {
-    background-color: var(--offwhite-bg-color);
-    border-radius: .5rem;
-    border: 1px solid var(--shadow-color);
-    box-shadow: var(--shadow-settings);
-    font-size: 1.25rem;
-    padding: .25rem .5rem;
-    text-align: center;
-    width: var(--segment-width);
-}
-
-.input {
-    text-align: left;
-}
-
-.segment:hover {
-    background-color: var(--offwhite-bg-color);
-    cursor: pointer;
-}
-
-.reminder-name:focus,
-.input:focus {
-    background-color: var(--white-bg-color);
-    box-shadow: none;
-    outline: dotted 1px black;
-}
-
-.interval-type:focus {
-    outline: none !important;
-}
-
-.reminder-name:hover,
-.input:hover {
-    cursor: text !important;
+.reminder-name {
+    text-align: center !important;
 }
 
 .interval-type {
     text-transform: capitalize;
 }
 
-.buttons-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.button {
-    background-color: var(--white-bg-color);
-    border-radius: .5rem;
-    border: 1px solid var(--shadow-color);
-    box-shadow: var(--shadow-settings);
-}
-
-.minus,
-.plus {
+.button.minus,
+.button.plus {
     font-size: 2rem;
     height: 3rem;
     width: 4rem;
 }
 
-.button:hover {
-    cursor: pointer;
-    transform: scale(1.015);
+.button.sign {
+    background-color: var(--clr-tertiary);
+    margin-top: .5rem;
 }
 
-.button:active,
-.submit:active {
-    background-color: var(--offwhite-bg-color);
-    box-shadow: .1rem .1rem var(--shadow-color);
-    transform: translate(0.1rem);
+.button.sign:hover {
+    background-color: var(--clr-tertiary-v2);
+}
+
+.button.sign:disabled:hover {
+    background-color: var(--clr-secondary);
+    cursor: not-allowed;
+}
+
+.button.sign:disabled:active {
+    transform: translate(0);
 }
 
 .container {
-    background-color: var(--white-bg-color);
+    background-color: var(--clr-white);
     border-radius: .5rem;
-    border: 1px solid var(--shadow-color);
+    border: 1px solid var(--clr-primary);
     box-shadow: var(--shadow-settings);
     margin-left: .7rem;
     margin-right: .5rem;
@@ -118,11 +55,11 @@
 }
 
 .numbers {
-    display: flex;
     align-items: center;
-    justify-content: center;
     border-radius: .5rem;
+    display: flex;
     font: var(--numbers-font);
+    justify-content: center;
     position: absolute;
     z-index: 1;
 }
@@ -155,8 +92,8 @@
     width: var(--numbers-width);
 }
 
-.remindername-error {
-    color: var(--danger-bg-color);
+.error {
+    color: var(--clr-danger-700);
     font-size: large;
     text-align: center;
 }
@@ -188,11 +125,10 @@
     width: 100%;
 }
 
-
 .reminderlist-buttons {
     align-items: center;
     border-radius: .5rem;
-    color: var(--shadow-color);
+    color: var(--clr-primary);
     display: none !important;
     height: 1.5rem;
     justify-content: center;
@@ -201,9 +137,11 @@
 }
 
 .reminderlist-buttons.delete:hover {
-    color: var(--danger-bg-color);
+    background-color: var(--clr-danger-700);
+    color: var(--clr-white);
 }
 
 .reminderlist-buttons.edit:hover {
-    color: var(--action-bg-color);
+    background-color: var(--clr-action-700);
+    color: var(--clr-white);
 }

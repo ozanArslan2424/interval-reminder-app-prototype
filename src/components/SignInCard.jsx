@@ -32,7 +32,7 @@ const SignInCard = () => {
                     onChange={(e) => setPwd(e.target.value)} />
                 <button
                     disabled={!user || !pwd ? true : false}
-                    className="segment button signin">
+                    className="segment button sign">
                     Giriş yap
                 </button>
             </form>

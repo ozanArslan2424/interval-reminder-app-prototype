@@ -6,7 +6,7 @@ export default function Navigation() {
     return (
         <nav>
             {pages.map(page => (
-                <NavLink key={page.id} to={page.link}>{page.name}</NavLink>
+                <NavLink key={page.id} to={page.link} className="navlink">{page.name}</NavLink>
             ))
             }
         </nav>

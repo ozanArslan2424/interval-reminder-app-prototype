@@ -23,30 +23,18 @@ const SignUpCard = ({ onSuccess }) => {
     const [validMatch, setValidMatch] = useState(false);
 
     const [errMsg, setErrMsg] = useState('');
-    // const [success, setSuccess] = useState(false);
 
     useEffect(() => {
-        const result = USER_REGEX.test(user);
-        console.log(result);
-        console.log(user);
-        setValidName(result);
+        setValidName(USER_REGEX.test(user));
     }, [user])
 
     useEffect(() => {
-        const result = MAIL_REGEX.test(mail);
-        console.log(result);
-        setValidMail(result);
+        setValidMail(MAIL_REGEX.test(mail));
     }, [mail])
 
     useEffect(() => {
-        const result = PWD_REGEX.test(pwd);
-        setValidPwd(result);
-        const match = pwd === matchPwd;
-        setValidMatch(match);
-        console.log(result);
-        console.log(match);
-        console.log(pwd);
-        console.log(matchPwd);
+        setValidPwd(PWD_REGEX.test(pwd));
+        setValidMatch(pwd === matchPwd);
     }, [pwd, matchPwd])
 
     useEffect(() => {
@@ -55,8 +43,6 @@ const SignUpCard = ({ onSuccess }) => {
 
     const handleRegSubmit = async (e) => {
         e.preventDefault();
-        console.log(user, pwd)
-
         // if button enabled with JS hack
         const v1 = USER_REGEX.test(user);
         const v2 = PWD_REGEX.test(pwd);
@@ -65,7 +51,6 @@ const SignUpCard = ({ onSuccess }) => {
             return;
         }
         console.log(user, mail, pwd, matchPwd);
-        // setSuccess(true);
         onSuccess();
     }
     return (

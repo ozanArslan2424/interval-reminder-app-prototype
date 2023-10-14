@@ -21,6 +21,7 @@ export default function Home() {
 
     const handleSignUpSuccess = () => {
         setSuccess(true);
+        console.log("Sign Up Success");
     }
 
     return (
@@ -29,7 +30,7 @@ export default function Home() {
             <SignInCard />
             {!success && (<SignUpCard onSuccess={handleSignUpSuccess} />)}
             <ReminderSettingsCard reminders={reminders} setReminders={setReminders} />
-            <ReminderListCard reminders={reminders} onDeleteReminder={deleteReminder} />
+            {reminders.length > 0 && (<ReminderListCard reminders={reminders} onDeleteReminder={deleteReminder} />)}
             <ReminderEditCard />
         </div>
     );

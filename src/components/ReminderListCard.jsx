@@ -17,7 +17,7 @@ const ReminderListCard = ({ reminders, onDeleteReminder }) => {
                             className="reminderlist-buttons edit button"
                             // onClick={() => onEditReminder(reminder.id)}
                         >
-                            <FontAwesomeIcon icon={faPen} size="m" />
+                            <FontAwesomeIcon icon={faPen} size="sm" />
                         </button>
                         <button
                             className="reminderlist-buttons delete button"

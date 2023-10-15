@@ -30,4 +30,4 @@ Bu web sitesi aralıklı hatırlatıcılar oluşturabileceğimiz bir uygulama fi
 >    - 🔴 Backend (kişiye özel çalışan hatırlatıcı listesi)
 >    - 🔴 Düzenle fonksiyonu
 > - 🟡 Düzenle kartı
->    -  🔴 Bu kart yalnızca düzenlenerken görünecek
+>    -  🔴 Bu kart yalnızca düzenlerken görünecek

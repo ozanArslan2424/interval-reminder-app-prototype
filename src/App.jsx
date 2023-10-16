@@ -3,9 +3,9 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 
 // PAGES
-import Home from "./pages/home"
-import One from "./pages/one"
-import Two from "./pages/two"
+import Home from "./pages/home.jsx"
+import One from "./pages/one.jsx"
+import Two from "./pages/two.jsx"
 
 export default function App() {
 

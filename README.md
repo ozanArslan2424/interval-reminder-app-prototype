@@ -10,6 +10,7 @@ Bu web sitesi aralıklı hatırlatıcılar oluşturabileceğimiz bir uygulama fi
 - Proje tasarımımın ana fikri tamamen kartlardan oluşan dinamik bir ana sayfa oluşturmak olduğu için bu versiyonu kartlardan en azından birkaçını yaptıktan sonra yüklemek istedim.
 - Bu versiyon son tasarıma en yakın olduğunu düşündüğüm css'i içeriyor.
 - Üstteki navbar sadece test nedenleriyle var. Sayfalara kullanışlı component'lar koymadım.
+- NOT: GitHub Pages çalışmıyor, henüz proje bitmediği için değiştiremeyeceğim bir şey yapmak istemedim.
   
 > ### Kontrol listesi 
 > - 🔴 Aktif/İnaktif kart ayrımı 
